@@ -45,23 +45,6 @@ parser.add_argument('--evaluate', '-e', action='store_true', help='evaluate mode
 parser.add_argument('--evaluate-checkpoint', default='./checkpoint/resnet32_best.pth.tar', type=str, help='evaluate checkpoint')
 parser.add_argument('--checkpoint-dir', default='./checkpoint_baseline_new_336', type=str, help='checkpoint directory')
 
-'''class CustomImageFolder(torchvision.datasets.ImageFolder):
-    def __init__(self, root, transform=None):
-        super(CustomImageFolder, self).__init__(root, transform=transform)
-
-    def __getitem__(self, index):
-        path, target = self.imgs[index]
-        try:
-            # 尝试打开图片文件
-            image = Image.open(path).convert('RGB')
-            if self.transform is not None:
-                image = self.transform(image)
-        except IOError as e:
-            # 如果文件损坏或不完整，打印错误并跳过该文件
-            print(f"无法打开图片 {path}: {e}")
-            return None, target
-
-        return image, target'''
     
 
 args = parser.parse_args()
