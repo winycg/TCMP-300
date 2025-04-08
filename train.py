@@ -98,6 +98,7 @@ trainset = torchvision.datasets.ImageFolder(
 testset = torchvision.datasets.ImageFolder(
     args.valdir, 
     transforms.Compose([
+        transforms.Resize(256),
         transforms.CenterCrop(224),
         transforms.ToTensor(),
         transforms.Normalize(mean=[0.485, 0.456, 0.406],
