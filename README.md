@@ -1,6 +1,6 @@
 #  TCMP-300: A Comprehensive Traditional Chinese Medicinal Plant Dataset for Plant Recognition
 
-Traditional Chinese Medicinal Plants (TCMPs) are often used to prevent and treat diseases for the human body. Since various medicinal plants have different therapeutic effects, plant recognition has become an important topic. Traditional identification of medicinal plants mainly relies on human experts, which does not meet the increased requirements in clinical practice. Artificial Intelligence (AI) research for plant recognition faces challenges due to the lack of a comprehensive medicinal plant dataset. Therefore, we present a TCMP dataset that includes 52,089 images in 300 categories. Compared to the existing medicinal plant datasets, our dataset has more categories and fine-grained plant parts to facilitate comprehensive plant recognition. The plant images were collected through the Bing search engine and cleaned by a pretrained vision foundation model with human verification. We conduct technical validation by training several state-of-the-art image classification models with advanced data augmentation on the dataset, and achieve 89.64% accuracy. Our dataset promotes the development and validation of advanced AI models for robust and accurate plant recognition. The TCMP-300 dataset is publicly available at https://huggingface.co/datasets/anzhulin/tcmp-300/tree/main.
+Traditional Chinese medicinal plants are often used to prevent and treat diseases for the human body. Since various medicinal plants have different therapeutic effects, plant recognition becomes an important topic. Traditional identification of medicinal plants mainly relies on human experts, which does not meet the increased requirements in clinical practice. Artificial Intelligence (AI) research for plant recognition faces challenges due to the lack of a comprehensive medicinal plant dataset. Therefore, we present a Chinese medicinal plant dataset that including 52089 images in 300 categories. Compared to the existing medicinal plant datasets, our dataset has more categories and fine-grained plant parts to facilitate comprehensive plant recognition. The plant images were collected through the Bing search engine and cleaned by a pretrained vision foundation model with human verification. We conduct technical validation by training several state-of-the-art image classification models with advanced data augmentation on the dataset, and achieve 89.64\% accuracy. Our dataset promotes the development and validation of advanced AI models for robust and accurate plant recognition.
 
 <img src="figures/TCMP-300.jpg" width="400" height="300">
 
@@ -18,6 +18,12 @@ CUDA 11.8
 please install python packages:
 ```
 pip install -r requirements.txt
+```
+## Data Acquisition
+You should install Bing Image Scraper from https://github.com/ultralytics/google-images-download
+The script to crawl TCMP images:
+```
+python download_image.py
 ```
 
 ## Data Cleaning
